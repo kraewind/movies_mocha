@@ -37,7 +37,7 @@ it('dropdown starts closed', () => {
     expect(dropdown.className).not.to.include('is-active')
 })
 
-it('After searching, dropdown opens up', () => {
+it('After searching, dropdown opens up', async () => {
     document.querySelector('input').value = 'Avengers'
     document.querySelector('input').dispatchEvent(new Event('input'))
 
