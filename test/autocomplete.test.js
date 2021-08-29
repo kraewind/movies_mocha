@@ -12,8 +12,6 @@ it('shows on autocomplete', () => {
             return movie.Title
         }
     })
-    const dropdown = document.querySelector('.dropDown')
-    it('does not show dropdown on page open', () => {
-        
-    })
+    const dropdown = document.querySelector('.dropdown')
+    expect(dropdown.className).not.to.include('is-active')
 })
