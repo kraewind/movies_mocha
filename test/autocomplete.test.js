@@ -49,3 +49,15 @@ it('After searching, dropdown opens up', async () => {
     expect(dropdown.className).to.include('is-active')
 
 })
+
+it('After searching, displays correct number of results', async () => {
+    document.querySelector('input').value = 'Avengers'
+    document.querySelector('input').dispatchEvent(new Event('input'))
+
+
+    await waitFor('.dropdown-item')
+
+    const items = document.querySelectorAll('.dropdown-item')
+
+    expect(items.length).to.equal(3)
+})
